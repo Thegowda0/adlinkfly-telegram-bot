@@ -68,7 +68,7 @@ def handle_ads_command(message):
 
 def handle_link(message):
   if is_valid_url(message.text):
-    bot.send_message(message.chat.id, "Shortening! Please wait...")
+    bot.send_message(message.chat.id, "Shortening! Please wait.....!")
     link = message.text
     shortened_link = shorten_link_withads(link)
     if shortened_link:
