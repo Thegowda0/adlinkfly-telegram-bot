@@ -89,6 +89,11 @@ def handle_text(message):
                    shortened_link,
                    parse_mode='Markdown',
                disable_web_page_preview=True)
+    bot.send_message(
+        message.chat.id,
+        "Tap to copy:\n`" + shortened_link + "`",
+        parse_mode='Markdown'
+    )
     else:
       bot.reply_to(message, 'Failed to shorten the link! Please try again...')
   else:
